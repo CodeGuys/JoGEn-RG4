@@ -1,3 +1,12 @@
+/*
+  not sure if I implemented this correctly. If anyone knows
+  how to properly do what I'm trying to do, please tell me.
+  you can email me at johnkayne.codeguys@gmail.com.
+  
+  I'm trying to make a variable class that can be defined for
+  any variable type (Var variable = new Var<String>("variable");)
+*/
+
 package jogen.variable;
 
 public class Var<Class c> {
