@@ -4,8 +4,14 @@ import java.util.Color;
 
 import javax.swing.*;
 
+import jogen.graphics.*;
+import jogen.graphics.universe.*;
+
 public final class Display extends JFrame {
-  private boolean fullscreen = false;
+  public static RenderPanel renderPanel;
+  public static DisplayUniverse universe;
+  
+  private static boolean fullscreen = false;
   
   public void setFullscreen(boolean b) {
     this.fullscreen = b;
@@ -32,6 +38,11 @@ public final class Display extends JFrame {
   }
   
   public void init() {
+    universe = new DisplayUniverse();
+    renderPanel = new RenderPanel(universe);
+    
+    add(renderPanel);
+    
     setFullscreen(true);
     setTitle(JoGEn.NAME);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
